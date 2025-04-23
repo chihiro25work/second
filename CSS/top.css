@@ -1,0 +1,204 @@
+@charset 'utf-8';
+
+/* ----- KVスライドショー ----- */
+.slideshow-fade {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    li {
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
+/* ----- 名前 ----- */
+.top {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* text-align: center; */
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* ----- worksセクション ----- */
+.item-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+/* 各セクションのタイトル */
+.title {
+    width: 70%;
+    background-color: #544739;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #bce2e8;
+    margin: 1rem auto 1rem; /* ← auto を追加！ */
+    text-align: center;
+}
+
+.item {
+    flex: 1;
+    box-shadow: 10px 10px 4px #ccc; /* コンテンツの影 */
+    padding-bottom: 1rem;
+}
+h3.item-title {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.item-img img {
+    width: 90%;
+    height: auto;
+    margin: 2rem auto 1rem; /* ← auto を追加！ */
+}
+.item-btn {
+    width: 30%;
+    background-color: #bce2e8;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 2rem auto 1rem; /* ← auto を追加！ */
+}
+
+.item-btn :hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+/* ----- about, othersセクション ----- */
+.about-wrap {
+    height: 300px;
+    width: 80%;
+    display: flex;
+    background-image: url(../img/me02.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 2rem auto 1rem; /* ← auto を追加！ */
+    color: #fff;
+    padding: 1rem;
+}
+
+.about-wrap img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.about-wrap p {
+    margin: auto 2rem; /* ← auto を追加！ */
+}
+
+.others .title {
+    margin-bottom: 3rem;
+}
+
+.about .title {
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+    /* KV */
+    .slideshow-fade {
+        width: 70%;
+        height: 500px;
+        margin: 0 auto;
+    }
+    .slideshow-fade img {
+        height: 400px;
+        width: 80%;
+        object-fit: cover; /* 画像をトリミングしてフィット */
+        object-position: bottom; /* 画像の下の部分を基準に */
+    }
+    /* 名前 */
+    .name {
+        font-size: 2rem;
+    }
+
+    /* WORKS */
+    .item-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 3rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 500px;
+        height: 480px; /* 高さを必ず指定*/
+    }
+    .item-img img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .item-img {
+        flex-grow: 1; /* 画像エリアを広げる */
+        display: flex;
+        justify-content: center;
+        align-items: center; /* ← ここで上下中央揃え */
+    }
+    .item-btn {
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .item-title {
+        text-align: center;
+        margin: 0;
+    }
+    /* ABOUT */
+    .about .title {
+        margin-bottom: 5rem;
+    }
+    /* OTHERS */
+    .others .title {
+        margin-bottom: 5rem;
+    }
+    .others-wrap {
+        width: 80%;
+        margin: 2rem auto 1rem; /* ← auto を追加！ */
+    }
+    .others-wrap img {
+        height: 300px;
+        object-fit: cover; /* 画像をトリミングしてフィット */
+        object-position: center; /* 画像の上の部分を基準に */
+    }
+    /* ホバーしたらカラーに */
+    .others-wrap a img {
+        filter: grayscale(100%);
+    }
+    .others-wrap a img:hover {
+        filter: grayscale(0);
+        transition: 0.3s;
+    }
+    /* セクションのタイトル共通 */
+    .title {
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+        font-size: 2rem;
+    }
+}

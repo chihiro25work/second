@@ -1,0 +1,86 @@
+@charset 'utf-8';
+
+/* 各セクションのタイトル */
+.page-title h1 {
+    width: 70%;
+    background-color: #544739;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #bce2e8;
+    margin: 1rem auto 1rem;
+    /* ← auto を追加！ */
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+/* 説明文：スマホでは最初は非表示 */
+.caption {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.375);
+    color: #f5f5f5;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* スマホ：クリックで表示 */
+.image-container.active .caption {
+    display: block;
+}
+
+/* ========== PCレイアウト（1024px以上） ========== */
+@media screen and (min-width: 1024px) {
+
+    .main-contents {
+        margin: 80px;
+        padding: 0 40px;
+        margin: 1rem auto 1rem;
+        /* ← auto を追加！ */
+    }
+
+    .page-title {
+        width: 70%;
+        margin: 1rem auto 1rem;
+        /* ← auto を追加！ */
+    }
+
+    section {
+        max-width: 1100px;
+        padding: 0 40px;
+    }
+
+    .container {
+        margin-top: 5rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ホバーで説明文表示 */
+    .image-container:hover .caption {
+        display: block;
+    }
+
+    /* PCではクリックでの表示は不要なので無効化 */
+    .image-container.active .caption {
+        display: none;
+    }
+}

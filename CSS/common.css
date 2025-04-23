@@ -1,0 +1,199 @@
+@charset 'utf-8';
+
+/* 
+アクセントカラー：#bce2e8 水色
+ベースカラー：#FFFCF7 薄いベージュ
+テキストカラー：#544739 茶色
+ */
+
+/* 共通スタイル（スマホファースト） */
+body {
+    font-family: "Sawarabi Gothic", "Arial", sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    background: #fffcf7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 上下中央（オプション） */
+    min-height: 100vh;
+    text-align: center; /* テキストの中央揃え */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+a :hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+/* トップに戻るアイコン */
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 99;
+}
+#page-top a {
+    background: #bce2e8;
+    text-decoration: none;
+    width: 40px;
+    padding: 10px 5px;
+    text-align: center;
+    display: block;
+    border-radius: 40px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+#page-top a:hover {
+    text-decoration: none;
+    opacity: 0.5;
+}
+.totop {
+    margin: 2rem 0;
+}
+
+/* トップページ・サブページ共通アイテム */
+/* ----- ヘッダー ----- */
+.header {
+    width: 100%;
+    height: auto;
+    background-color: #544739;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+.header-inner {
+    display: flex;
+    align-items: center; /* ←縦（上下）中央揃え */
+    justify-content: space-between; /* ロゴとinfoを左右に分ける */
+    padding-right: 50px;
+}
+.header-logo img {
+    height: 50px; /* 高さ */
+}
+/* メールアドレス */
+.info a {
+    color: #bce2e8;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+/* ----- グローバルナビ ----- */
+.gnav {
+    display: none;
+    background: #fffcf7;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.gnav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.gnav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+/* ハンバーガー */
+.toggle {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.toggle span {
+    display: block;
+    height: 3px;
+    background: #bce2e8;
+    margin: 5px 0;
+}
+
+/* ----- footer ----- */
+.footer {
+    background: #544739;
+    padding: 1.5rem 0;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+    margin: 0 0 1rem;
+}
+
+.footer-nav a {
+    color: #bce2e8;
+    text-decoration: none;
+}
+
+.copy {
+    color: #bce2e8;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+    /* ヘッダー */
+    .header {
+        margin-bottom: 2rem;
+    }
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .gnav {
+        display: block !important;
+        position: static;
+    }
+    .gnav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .gnav :hover {
+        /* ホバー時のスタイル */
+        background-color: #bce2e8; /* 薄いグレー */
+        color: #ffffff; /* 白 */
+    }
+    /* ハンバーガー */
+    .toggle {
+        display: none;
+    }
+
+    /* フッター */
+    .footer {
+        margin-top: 10rem;
+    }
+    .footer-nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}

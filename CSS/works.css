@@ -1,0 +1,191 @@
+@charset 'utf-8';
+
+/* 各セクションのタイトル */
+.page-title h1 {
+    width: 70%;
+    background-color: #544739;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #bce2e8;
+    margin: 1rem auto 1rem;
+    /* ← auto を追加！ */
+    text-align: center;
+}
+
+/* MOREボタンを押したら詳細表示 */
+details {
+    margin-top: 3rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+}
+
+/* 共通設定 */
+body {
+    line-height: 1.8;
+    /* 行の高さ */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.page-title {
+    margin-top: 70px;
+}
+
+section {
+    max-width: 700px;
+    margin-top: 30px;
+    padding: 0 25px;
+}
+
+/* ポートフォリオセクション */
+
+/* プロダクトごとに見やすく */
+.unit {
+    width: 90%;
+    background-color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 7px 10px 5px #979797;
+    margin: 2rem auto 1rem;
+    /* ← auto を追加！ */
+}
+
+.img-box {
+    background: #fff;
+}
+
+.title {
+    display: block;
+    /* または省略可 */
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.visit-btn {
+    width: 70%;
+    background-color: #bce2e8;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+    margin: 2rem auto 1rem;
+    /* ← auto を追加！ */
+}
+
+.unit .title h2 {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.unit .title p {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.unit .item {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.unit .content .comment {
+    text-align: left;
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+    white-space: pre-line;
+}
+
+/* ========== PCレイアウト ========== */
+@media screen and (min-width: 1024px) {
+
+    .page-title {
+        width: 70%;
+        margin: 1rem auto 1rem;
+        /* ← auto を追加！ */
+    }
+
+    section {
+        max-width: 1100px;
+        padding: 0 40px;
+    }
+
+    .title {
+        margin: 1rem auto 1rem;
+    }
+
+    .content {
+        margin: 1rem auto 1rem;
+
+    }
+
+    .unit {
+        text-align: left;
+    }
+
+    .visit-btn {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .unit {
+        width: 60%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem;
+        box-shadow: 7px 10px 5px #979797;
+        margin: 80px auto 10rem;
+        /* ← auto を追加！ */
+    }
+
+    .unit>img {
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+
+    .unit .title {
+        text-align: left;
+        width: 70%;
+    }
+
+    .unit .content {
+        width: 70%;
+    }
+
+    .under-img {
+        flex-direction: row;
+        justify-content: center;
+        width: 70%;
+    }
+
+    .under-img img {
+        width: 48%;
+    }
+}
